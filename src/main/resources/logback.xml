@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date{HH:mm:ss} %-5level [%logger.%method:%line] %message%n%exception</pattern>
+		</layout>
+	</appender>
+	
+	<!-- RULES for logging DEBUG < INFO < WARN < ERROR < FATAL.-->
+	<!-- Root -->
+	<root>
+		<level value="error"  additivity="false"/>
+		<appender-ref ref="CONSOLE" />
+	</root>
+	
+	<logger name="jdbc.sqltiming" level="OFF"/>
+	<logger name="jdbc.audit" level="OFF"/>
+	<logger name="jdbc.resultset" level="OFF"/>
+	
+	<!-- Query -->
+	<logger name="jdbc.sqlonly" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	
+	<!-- Query Result -->
+	<logger name="jdbc.resultsettable" level="debug" additivity="false"/>
+	
+	<!-- Application -->
+	<logger name="lifthrasir.toolkit.steinsgate.archive" additivity="false">
+		<level value="info" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	
+</configuration>
+
