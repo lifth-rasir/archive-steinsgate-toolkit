@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>lifthrasir.toolkit.steinsgate.archive</groupId>
 	<artifactId>archive-steinsgate-toolkit</artifactId>
-	<version>20210429</version>
+	<version>20210507</version>
 	<name>archive-steinsgate-toolkit</name>
 	<description>Toolkit to archive NAVER Cafe Steins;Gate</description>
 	<packaging>jar</packaging>
