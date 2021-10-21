@@ -155,7 +155,7 @@ public class ArchiveSteinsGateToolkitApplication extends JFrame {
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					driver.manage().window().setSize(new org.openqa.selenium.Dimension(1130, 800));
 					driver.get("https://naver.com");
-					append("현재 접속된 네이버 홈페이지에 카페에 가입한 계정으로 로그인 후, '로그인 완료' 버튼을 누르세요");
+					append("현재 접속된 네이버 홈페이지에 구 슈타인즈게이트 팬카페에 가입되어 있는 계정으로 로그인 후, '로그인 완료' 버튼을 누르세요");
 					append("창 포커스를 옮겨도 좋지만, 브라우저를 닫거나 창 크기를 조절하지 마세요. 이미지 캡처에 영향을 줍니다.");
 					btnCompleteLogin.setEnabled(true);
 				}catch(Exception e){
@@ -167,6 +167,7 @@ public class ArchiveSteinsGateToolkitApplication extends JFrame {
 		btnCompleteLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				driver.get(baseUrl);
+				append("구 슈타인즈게이트 팬카페, cafe.naver.com/stgate 주소로 접속되었을 겁니다.");
 				append("이 툴킷이 위치한 드라이브에 최소 25GB 여유공간 준비 후, '백업 시작' 버튼을 누르세요.");
 				btnCompleteLogin.setEnabled(false);
 				btnStartBackup.setEnabled(true);
@@ -175,7 +176,7 @@ public class ArchiveSteinsGateToolkitApplication extends JFrame {
 		
 		btnStartBackup.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				appendln("저장경로 스캔 후, 마지막 게시글 부터 이어 진행합니다. 처음부터 할 경우 예상 소요시간은 30시간25분 입니다.");
+				appendln("저장경로 스캔 후, 마지막 게시글 부터 이어 진행합니다. 처음부터 할 경우 단순계산 상 예상 소요시간은 30시간25분 입니다.");
 				btnStartBackup.setEnabled(false);
 				btnStopBackup.setEnabled(true);
 				thread.startThread(restTemplateBuilder);

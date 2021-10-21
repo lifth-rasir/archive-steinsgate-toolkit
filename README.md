@@ -9,7 +9,8 @@ Toolkit to archive NAVER Cafe Steins;Gate
 	* 본문의 이미지와 첨부파일 백업을 지원합니다. (동영상은 X)
 	* 게시글을 html, png 형식으로 기록합니다.
 	* 이어받기를 지원합니다.
-
+	* Mac, Windows 호환
+	
 ## 2. 경고
 	* 백업 도구를 웹 사이트 등에 게시하지 마십시오.
 	* 백업 데이터로 이득을 취하는 행위는 명백한 불법 입니다.
@@ -24,8 +25,10 @@ Toolkit to archive NAVER Cafe Steins;Gate
 5. 실행
 	* archive-steinsgate-toolkit.jar 파일을 더블클릭해 실행합니다.
 	* 만약 30초 이상 반응이 없다면, archive-steinsgate-toolkit.bat 파일을 더블클릭해 실행합니다.
-	* 크롬드라이버 관련 오류가 출력된다면, 호환되는 [chromedriver.exe](https://chromedriver.chromium.org/downloads)를 다운로드 받아 교체합니다. 포함된 기본버전은 90입니다.
-6. 프로그램 안내에 따라 백업을 진행합니다. 트래픽 집중을 막기위해 약 30시간에 거쳐 서서히 진행됩니다.
+	* 포함된 크롬 드라이버 버전은 윈도우용(chromedriver.exe) 90, M1맥용(chromedriver) 95.0.4638.17 입니다.
+	* Mac 개발자로써 개발툴에서 실행하는 경우 chromedriver 우클릭 -> properties -> execute 권한 부여 후 실행하십시오.
+	* 크롬 드라이버 버전 오류가 출력된다면, 호환되는 [chromedriver.exe](https://chromedriver.chromium.org/downloads)를 다운로드 받아 교체합니다.
+6. 프로그램 안내에 따라 백업을 진행합니다. 트래픽 집중을 막기위해 단순계산 상 약 30시간에 거쳐 서서히 진행됩니다.
 7. jar 파일과 동일한 경로에 백업 파일이 생성됩니다.
 8. 이어받기
 	* html파일의 끝 번호를 기준으로 이어받기 하므로, 누락분을 채우려면 그 이후 번호의 게시글 폴더를 모두 제거해야 합니다.
@@ -43,4 +46,5 @@ Toolkit to archive NAVER Cafe Steins;Gate
 ## 5. 개발환경
 	* Spring Tool Suite 4.9.0
 	* Java 8
-	* Windows 10
+	* Windows 10 (x64)
+	* macOS Big Sur 11.6 (m1)
